@@ -1,4 +1,4 @@
-package practice.springboot.service;
+package practice.boot.service;
 
 import org.springframework.stereotype.Component;
 
@@ -6,6 +6,6 @@ import org.springframework.stereotype.Component;
 public class MessageProvider {
 
 	public String giveMessage() {
-		return "How are you doing a**hole...";
+		return "How are you doing ???";
 	}
 }

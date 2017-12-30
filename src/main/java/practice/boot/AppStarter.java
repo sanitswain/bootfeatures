@@ -1,4 +1,4 @@
-package practice.springboot;
+package practice.boot;
 
 import java.io.PrintStream;
 
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import practice.springboot.service.MyService;
+import practice.boot.service.MyService;
 
 /**
  * @author Sanit
@@ -26,13 +26,13 @@ public class AppStarter {
 	@Autowired
 	private MyService service;
 
-	@RequestMapping("/")
 	@ResponseBody
+	@RequestMapping("/")
 	public String home() {
 		return service.invokeService();
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		// SpringApplication.run(AppStarter.class, args);
 
 		SpringApplication app = new SpringApplication(AppStarter.class);

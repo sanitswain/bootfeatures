@@ -1,4 +1,4 @@
-package practice.springboot.features;
+package practice.boot.features;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
-import practice.springboot.features.ConfigurationPropertiesTest.Technology;
+import practice.boot.features.ConfigurationPropertiesTest.Technology;
 
 /**
  * @author Sanit

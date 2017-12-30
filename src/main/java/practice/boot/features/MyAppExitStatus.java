@@ -1,4 +1,4 @@
-package practice.springboot.features;
+package practice.boot.features;
 
 import org.springframework.boot.ExitCodeGenerator;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-package practice.springboot.features;
+package practice.boot.features;
 
 import javax.annotation.PostConstruct;
 
@@ -8,14 +8,12 @@ import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 /**
- * @author Sanit
- *
- *         Spring Boot will also register a CommandLinePropertySource with the
- *         Spring Environment. This allows you to also inject single application
- *         arguments using the @Value annotation.
+ * Spring Boot will also register a CommandLinePropertySource with the Spring
+ * Environment. This allows you to also inject single application arguments
+ * using the @Value annotation.
  * 
- *         This example shows how a command line argument can be configured to a
- *         bean with @Value annotation.
+ * This example shows how a command line argument can be configured to a bean
+ * with @Value annotation.
  */
 @Component
 public class CommandLinePropertySourceTest {

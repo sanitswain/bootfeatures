@@ -1,4 +1,4 @@
-package practice.springboot.features;
+package practice.boot.features;
 
 import java.util.HashMap;
 import java.util.List;

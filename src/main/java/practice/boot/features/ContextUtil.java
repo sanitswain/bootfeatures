@@ -1,4 +1,4 @@
-package practice.springboot.features;
+package practice.boot.features;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
