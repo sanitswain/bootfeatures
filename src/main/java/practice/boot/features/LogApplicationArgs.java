@@ -5,9 +5,10 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.stereotype.Component;
 
 /**
- * @author Sanit
- *
- *         To see what are the arguments passed while running the application
+ * ApplicationArguments is used to access the application arguments that were
+ * passed to run the application. It provides access to both the raw String[]
+ * arguments as well as parsed option and non-option arguments.
+ * 
  */
 @Component
 public class LogApplicationArgs {

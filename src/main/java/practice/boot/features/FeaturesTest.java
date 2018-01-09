@@ -6,14 +6,13 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Component;
 
 import practice.boot.features.ConfigurationPropertiesTest.Technology;
 
 /**
- * @author Sanit
- * 
- *         This is just a runner class to execute spring boot features.
+ * This is just a runner class to execute spring boot features.
  */
 @Component
 @Configuration
@@ -25,7 +24,7 @@ public class FeaturesTest implements ApplicationRunner {
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		System.out.println(config);
-		System.out.println(technology());
+		System.out.println("\n==>> technology" + technology());
 	}
 
 	/*

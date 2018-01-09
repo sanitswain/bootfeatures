@@ -21,6 +21,7 @@ public class CommandLinePropertySourceTest {
 	@Autowired
 	private Environment env;
 
+	// This will be coming from command line.
 	@Value("${user.name}")
 	private String username;
 

@@ -1,2 +1,2 @@
 org.springframework.boot.diagnostics.FailureAnalyzer=/
-practice.springboot.features.failureanalyzers.SampleFailureAnalyzer
+practice.boot.features.failureanalyzers.SampleFailureAnalyzer
