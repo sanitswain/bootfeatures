@@ -11,7 +11,6 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,10 +24,10 @@ import practice.boot.service.MyService;
  */
 @Controller
 @SpringBootApplication
-@PropertySource({ "classpath:project.properties" })
+@PropertySource({ "classpath:application.properties", "classpath:project.properties" })
+@PropertySource("features.properties")
 @EnableScheduling
 @ServletComponentScan
-@PropertySource("classpath:application.properties")
 public class AppStarter {
 
 	@Autowired
@@ -54,10 +53,11 @@ public class AppStarter {
 		ConfigurableApplicationContext ctx = SpringApplication.run(AppStarter.class, args);
 		String str = ctx.getEnvironment().getProperty("some.prop");
 		// String str = app.run(args).getEnvironment().getProperty("some.prop");
-		System.out.println("==============>>>> " + str);
+		System.out.println("===>>>> " + str);
 
-		System.out.println("===>>>> env = " + env);
-		System.out.println("===>>>> descr = " + descr);
+		if (ctx.containsBean("reportingScheduler")) {
+			System.out.println(">>>  " + ctx.getBean("reportingScheduler"));
+		}
 	}
 
 	public static class TextBanner implements Banner {
