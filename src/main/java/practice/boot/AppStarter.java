@@ -3,7 +3,6 @@ package practice.boot;
 import java.io.PrintStream;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -33,12 +32,6 @@ public class AppStarter {
 	@Autowired
 	private MyService service;
 
-	@Value("${some.prop}")
-	private static String descr;
-
-	@Autowired
-	private static Environment env;
-
 	@ResponseBody
 	@RequestMapping("/")
 	public String home() {
@@ -51,9 +44,6 @@ public class AppStarter {
 		// SpringApplication app = new SpringApplication(AppStarter.class);
 		// app.setBanner(new TextBanner());
 		ConfigurableApplicationContext ctx = SpringApplication.run(AppStarter.class, args);
-		String str = ctx.getEnvironment().getProperty("some.prop");
-		// String str = app.run(args).getEnvironment().getProperty("some.prop");
-		System.out.println("===>>>> " + str);
 
 		if (ctx.containsBean("reportingScheduler")) {
 			System.out.println(">>>  " + ctx.getBean("reportingScheduler"));

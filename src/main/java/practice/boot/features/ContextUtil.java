@@ -7,10 +7,19 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
+/**
+ * @author Sanit
+ * 
+ *         Alternate approach to just autowire @ApplicationContext which will
+ *         automatically inject ApplicationContext bean.
+ *
+ */
 @Component
 public class ContextUtil implements ApplicationContextAware {
 
 	private ApplicationContext ctx;
+	
+	//@Autowired private ApplicationContext applicationCtx;
 
 	@Autowired
 	private Environment env;
